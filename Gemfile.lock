@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: c0980d30360149d0c77beb79850e047440c628bf
+  revision: 3779b5069dd1742d878cc0e322fc642e730efa42
   branch: main
   specs:
     actioncable (7.1.0.alpha)
@@ -104,6 +104,7 @@ GEM
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
     base64 (0.1.1)
+    bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -124,18 +125,20 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    devise (4.9.2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     drb (2.1.1)
       ruby2_keywords
     error_highlight (0.5.1)
     erubi (1.12.0)
-    ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    image_processing (1.12.2)
-      mini_magick (>= 4.9.5, < 5)
-      ruby-vips (>= 2.0.17, < 3)
     importmap-rails (1.2.1)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -155,7 +158,6 @@ GEM
       net-smtp
     marcel (1.0.2)
     matrix (0.4.2)
-    mini_magick (4.12.0)
     mini_mime (1.1.5)
     minitest (5.19.0)
     msgpack (1.7.2)
@@ -176,6 +178,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     public_suffix (5.0.3)
     puma (6.3.0)
       nio4r (~> 2.0)
@@ -199,9 +202,10 @@ GEM
     regexp_parser (2.8.1)
     reline (0.3.7)
       io-console (~> 0.5)
+    responders (3.1.0)
+      actionpack (>= 5.2)
+      railties (>= 5.2)
     rexml (3.2.6)
-    ruby-vips (2.1.4)
-      ffi (~> 1.12)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.11.0)
@@ -228,6 +232,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -251,8 +257,8 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  devise (~> 4.9)
   error_highlight (>= 0.4.0)
-  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   puma (>= 5.0)
