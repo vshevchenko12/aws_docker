@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+.navbar-brand {
+	border-radius: 50%;
+	height: 230px;
+}
+
+.navbar {
+	top: 0;
+	left: 0;
+	width: 100wv;
+	background-image: url('https://mir-s3-cdn-cf.behance.net/f05398d9d548aa6ac5a4cecc3a21dd0c/11ef21eb-b92e-4819-8386-65d6700ff267_rwc_0x430x8000x1217x8000.jpg?h=9b9ecd6f666fc1557198c811d975e2c9');
+	background-size: cover; /* Adjust background-size property as needed */
+}
+.nav-link,
+.navbar-toggler {
+	/* background-color: rgb(142, 240, 228); */
+	background-color: rgb(224, 224, 223);
+
+	/* opacity: 0.8; */
+}
+
+.offcanvas-body,
+.navbar-toggler {
+	margin-top: 220px;
+}
+
+.offcanvas-header {
+	margin-bottom: -220px;
+}
+
+#offcanvasNavbarLabel {
+	margin-left: 70px;
+}
+
+#offcanvas-close-btn {
+	margin-bottom: 210px;
+}
+
+.dropdown-item:hover {
+	background-color: #0dcaf0;
+}
+
+/* .offcanvas-end {
+	background-color: rgb(250, 246, 240);
+} */
